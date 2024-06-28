@@ -2,8 +2,8 @@
 
 ## 📚 About
 
-`@crayon/literal` is an extension for Crayon that adds support for styling using ES6 Literal
-Templates.
+`@crayon/literal` is an extension for [Crayon](https://github.com/crayon-js/crayon) that adds
+support for styling using ES6 Literal Templates.
 
 ## ⚙️ Usage
 
