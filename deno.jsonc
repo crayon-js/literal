@@ -1,0 +1,20 @@
+{
+  "name": "@crayon/literal",
+  "version": "1.0.0-alpha.1",
+
+  "imports": {
+    "@crayon/crayon": "jsr:/@crayon/crayon@4.0.0-alpha.2",
+    // tests
+    "@cross/test": "jsr:@cross/test@0.0.9",
+    "@std/assert": "jsr:@std/assert@0.221.0"
+  },
+  "exports": "./main.ts",
+
+  "fmt": {
+    "lineWidth": 100
+  },
+
+  "compilerOptions": {
+    "lib": ["es2023", "dom"]
+  }
+}
