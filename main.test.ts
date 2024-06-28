@@ -1,3 +1,4 @@
+// Copyright 2024 Im-Beast. All rights reserved. MIT license.
 import { test } from "@cross/test";
 import { assert, assertEquals, assertThrows } from "@std/assert";
 
