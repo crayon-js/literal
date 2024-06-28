@@ -39,9 +39,6 @@ jobs:
       - name: Run dry publish
         run: deno publish --dry-run
 
-      - name: Run benchmarks
-        run: deno task bench
-
       - name: Check license headers
         run: |
           deno run -A --no-check https://deno.land/x/anzu@1.0.2/src/cli.ts \
