@@ -31,4 +31,5 @@ jobs:
 
       - name: Run tests
         run: |
-          npx --yes tsx --test **/*.test.ts
+          npx --yes tsx --test **/*.test.ts && \
+          NO_COLOR=1 npx --yes tsx --test **/*.test.ts
