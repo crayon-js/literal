@@ -1,6 +1,6 @@
 {
   "name": "@crayon/literal",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
 
   "imports": {
     "@crayon/crayon": "jsr:/@crayon/crayon@4.0.0-alpha.3",
