@@ -81,13 +81,15 @@ export function literal(
     text += substitutions[i] ?? "";
   }
 
-  if (prototype.$colorSupport === ColorSupport.NoColor) {
-    return text;
-  }
-
   let matches = text.match(literalStyleRegex);
   while (matches?.length) {
     const [section, styles, body] = matches;
+
+    if (prototype.$colorSupport === ColorSupport.NoColor) {
+      text = replace(text, section, body);
+      matches = text.match(literalStyleRegex);
+      continue;
+    }
 
     let styleBuffer = "";
     for (const style of styles.split(".")) {
