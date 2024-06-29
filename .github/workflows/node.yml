@@ -12,11 +12,23 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        node-version: [18.x, 21.x]
+        node-version: [21.x, 22.x]
 
     steps:
-      - uses: actions/checkout@v3
-      # TODO: Update crayon version after stable release
-      - run: npx jsr add @crayon/crayon@4.0.0-alpha.2 @cross/test @std/assert
-      - run: 'echo ''{ "type": "module" }'' > package.json' # Needed for tsx to work
-      - run: npx --yes tsx --test *.test.ts
+      - name: Setup repo
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Prepare environment
+        # TODO: Update crayon version after stable release
+        run: |
+          echo '{ "type": "module" }' > package.json && \
+          npx jsr add @crayon/crayon@4.0.0-alpha.3 @cross/test @std/assert
+
+      - name: Run tests
+        run: |
+          npx --yes tsx --test **/*.test.ts
