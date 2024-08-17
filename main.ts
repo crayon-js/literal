@@ -98,8 +98,8 @@ export function literal(
       styleBuffer += parsedStyle;
     }
 
-    const matchedText = replaceAll(body, "\x1b[0m", "\x1b[0m" + styleBuffer);
-    text = replace(text, section, styleBuffer + matchedText + "\x1b[0m");
+    const matchedText = replaceAll(body, "\x1b[0m\x1b[0m", "\x1b[0m" + styleBuffer);
+    text = replace(text, section, styleBuffer + matchedText + "\x1b[0m\x1b[0m");
 
     matches = text.match(literalStyleRegex);
   }
