@@ -27,7 +27,7 @@ jobs:
         # TODO: Update crayon version after stable release
         run: |
           echo '{ "type": "module" }' > package.json && \
-          npx jsr add @crayon/crayon@4.0.0-alpha.3 @beast/compat @std/assert
+          npx jsr add @crayon/crayon@4.0.0-alpha.4 @beast/compat @std/assert
 
       - name: Run tests
         run: |
