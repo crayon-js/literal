@@ -2,7 +2,7 @@
 import { env, test } from "@beast/compat";
 import { assertEquals, assertThrows } from "@std/assert";
 
-import crayon from "@crayon/crayon";
+import { crayon } from "@crayon/crayon";
 import "./main.ts";
 
 const NO_COLOR = !!(env("NO_COLOR") && env("NO_COLOR") !== "0");
